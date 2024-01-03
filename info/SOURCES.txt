@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+requirements_dev.txt
+CookieCutterProject/__init__.py
+CookieCutterProject/predict_model.py
+CookieCutterProject/train_model.py
+CookieCutterProject.egg-info/PKG-INFO
+CookieCutterProject.egg-info/SOURCES.txt
+CookieCutterProject.egg-info/dependency_links.txt
+CookieCutterProject.egg-info/requires.txt
+CookieCutterProject.egg-info/top_level.txt
