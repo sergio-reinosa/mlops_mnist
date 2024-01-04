@@ -39,8 +39,9 @@ def train():
 
             running_loss += loss.item()
             print(f'Running Loss: {running_loss}')
-   
-    torch.save(model, "trained_model.pt")
+
+    model_path = "models"
+    torch.save(model, os.path.join(model_path, "trained_model.pt"))
 
 
 if __name__ == "__main__":

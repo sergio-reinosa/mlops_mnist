@@ -17,4 +17,4 @@ WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 
 # -u to redirect print statements
-ENTRYPOINT ["python", "-u", "src/train_model.py"]
+ENTRYPOINT ["python", "-u", "src/predict_model.py"]

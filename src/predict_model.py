@@ -10,7 +10,8 @@ def evaluate():
     print("Evaluating like my life dependends on it")
 
     # TODO: Implement evaluation logic here
-    model = torch.load("trained_model.pt")
+    model_path = "models"
+    model = torch.load(os.path.join(model_path,"trained_model.pt"))
     test_set = get_test_dataset()
 
     equals = 0
