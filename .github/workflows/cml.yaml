@@ -1,15 +1,24 @@
 name: train-my-model
 on: [push]
+
 jobs:
   run:
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
+
+      - name: Debugging Output
+        run: |
+          pwd  # Print current working directory
+          ls -la  # List all files and directories
+
       - uses: iterative/setup-cml@v1
+
       - name: Train model
         run: |
-          pip install -r requirements.txt  # install dependencies
-          python train_cml.py  # run training
+          pip install -r requirements.txt  # Install dependencies
+          python mlops_mnist/train_cml.py  # Run training
+
       - name: Write report
         env:
           # this authenticates that the right permissions are in place
