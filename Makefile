@@ -6,7 +6,7 @@
 
 PROJECT_NAME = mlops_mnist
 PYTHON_VERSION = 3.10
-PYTHON_INTERPRETER = /home/hhauter/anaconda3/envs/pfas/bin/python
+PYTHON_INTERPRETER = python
 
 #################################################################################
 # COMMANDS                                                                      #

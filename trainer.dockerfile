@@ -7,12 +7,14 @@ RUN apt update && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt requirements.txt
-COPY pyproject.toml pyproject.toml
-COPY <project-name>/ <project-name>/
+COPY setup.py setup.py
+COPY src/ src/
 COPY data/ data/
+COPY models/ models/
 
 WORKDIR /
+# no cache for smaller image size
 RUN pip install -r requirements.txt --no-cache-dir
-RUN pip install . --no-deps --no-cache-dir
 
-ENTRYPOINT ["python", "-u", "<project_name>/train_model.py"]
+# -u to redirect print statements
+ENTRYPOINT ["python", "-u", "src/train_model.py"]
