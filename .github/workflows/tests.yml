@@ -54,3 +54,5 @@ jobs:
         name: coverage-report
         path: |
           ${{ github.workspace }}/htmlcov
+    - name: Set status check
+      run: echo "::set-output name=status::success"          
