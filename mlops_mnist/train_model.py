@@ -2,7 +2,7 @@ import click
 import torch
 from torch import nn
 from torch import optim
-from models.model import MyNeuralNetOne
+from mlops_mnist.models.model import MyNeuralNetOne
 import os
 from torch.utils.data import DataLoader, TensorDataset
 from torchvision import transforms
@@ -28,7 +28,8 @@ def get_train_dataset(batch_size):
 @click.option("--lr", default=0.001, help="learning rate to use for training")
 @click.option("--epochs", default=10, help="number of epochs to train for")
 @click.option("--batch_size", default=256, help="batch size to use for training")
-def train(lr, epochs, batch_size):
+@click.option("--model_name", default="trained_model.pt", help="name of the trained model")
+def train(lr, epochs, batch_size, model_name):
     # project: name of project 
     # entity: username or teamname 
     wandb.init()
@@ -40,7 +41,7 @@ def train(lr, epochs, batch_size):
     train_set = get_train_dataset(batch_size)
 
     epochs = epochs
-    wandb.log({"image": wandb.Image('/home/hhauter/Documents/W23/MLOps/mlops_mnist/src/cat.jpeg')})
+    # wandb.log({"image": wandb.Image('/home/hhauter/Documents/W23/MLOps/mlops_mnist/src/cat.jpeg')})
     for e in range(epochs):
         print(f'Epoch: {e}')
         running_loss = 0
@@ -58,7 +59,7 @@ def train(lr, epochs, batch_size):
             print(f'Running Loss: {loss}')
 
     model_path = "models"
-    torch.save(model, os.path.join(model_path, "trained_model.pt"))
+    torch.save(model, os.path.join(model_path, model_name))
 
 
 if __name__ == "__main__":
