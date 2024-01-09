@@ -4,6 +4,7 @@ numpy
 omegaconf
 pytest
 pytorch_lightning
+scikit_learn
 setuptools
 torch
 torchvision
