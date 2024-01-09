@@ -2,10 +2,8 @@ import os
 
 import click
 import torch
-from omegaconf import DictConfig, OmegaConf
 from torch import nn, optim
-from torch.utils.data import DataLoader, TensorDataset
-from torchvision import transforms
+from torch.utils.data import DataLoader
 
 import wandb
 from mlops_mnist.models.model import MyNeuralNetOne
