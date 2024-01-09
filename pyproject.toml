@@ -3,19 +3,19 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "CookieCutterProject"
+name = "mlops_mnist"
 version = "0.0.1"
-description = "This is an example cookiecutter project for Machine Learning applications"
+description = "A mist recognition project for excercieses at DTU MLops curse"
 authors = [
   { name = "hmhauter", email = "your@email.com" },
 ]
 
 readme = "README.md"
 requires-python = "~=3.10"
-dynamic = ["dependencies", "optional-dependencies"]
+dynamic = ["dependencies", "optional-dependencies", "license"]
 
 [tool.setuptools]
-packages = ["CookieCutterProject"]
+packages = ["mlops_mnist"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
@@ -24,4 +24,5 @@ dependencies = {file = ["requirements.txt"]}
 dev = {file = ['requirements_dev.txt']}
 
 [tool.ruff]
+select = ["I"]
 line-length = 120
