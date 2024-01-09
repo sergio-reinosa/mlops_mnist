@@ -1,13 +1,14 @@
+import os
+
 import click
 import torch
-from torch import nn
-from torch import optim
-from mlops_mnist.models.model import MyNeuralNetOne
-import os
+from omegaconf import DictConfig, OmegaConf
+from torch import nn, optim
 from torch.utils.data import DataLoader, TensorDataset
 from torchvision import transforms
-from omegaconf import DictConfig, OmegaConf
+
 import wandb
+from mlops_mnist.models.model import MyNeuralNetOne
 
 
 def get_train_dataset(batch_size):

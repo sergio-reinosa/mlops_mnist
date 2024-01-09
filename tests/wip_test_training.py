@@ -1,6 +1,8 @@
 import os
+
+import pytest
 from click.testing import CliRunner
-import pytest 
+
 from mlops_mnist.train_model import train
 
 

@@ -1,7 +1,8 @@
+import pytorch_lightning as pl
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import pytorch_lightning as pl
+
 
 class MyLightningModule(pl.LightningModule):
     def __init__(self):

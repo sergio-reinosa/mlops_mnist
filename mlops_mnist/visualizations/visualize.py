@@ -1,5 +1,6 @@
-import torch
 import os
+
+import torch
 from torch.utils.data import DataLoader, TensorDataset
 
 from data.get_dataset import get_test_dataset

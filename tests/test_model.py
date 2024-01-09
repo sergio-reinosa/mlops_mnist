@@ -1,8 +1,11 @@
-import pytest
-import numpy as np
-import torch
 import sys
+
+import numpy as np
+import pytest
+import torch
+
 from mlops_mnist.models.model import MyNeuralNetOne
+
 
 def test_model():
     model = MyNeuralNetOne()

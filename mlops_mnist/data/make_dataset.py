@@ -1,9 +1,9 @@
-import torch
 import os
+
+import torch
+from matplotlib import pyplot as plt
 from torch.utils.data import DataLoader, TensorDataset
 from torchvision import datasets, transforms
-from matplotlib import pyplot as plt
-
 
 if __name__ == "__main__":
     """Return train and test dataloaders for MNIST."""
