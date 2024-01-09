@@ -9,7 +9,7 @@ def test_training(lr, epochs, batch_size, model_name):
     runner = CliRunner()
     runner.invoke(train, ["--lr", str(lr), "--epochs", str(epochs), "--batch_size", str(batch_size), "--model_name", model_name])
 
-    path = os.path.join("/home/hhauter/Documents/W23/MLOps/mlops_mnist/models", model_name)
+    path = os.path.join("models", model_name)
     assert os.path.exists(path)
 
     # clean up 
