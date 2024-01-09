@@ -32,14 +32,14 @@ def train():
     for e in range(epochs):
         running_loss = 0
         for images, labels in train_set:
-            
+
             optimizer.zero_grad()
-            
+
             log_ps = model(images)
             loss = criterion(log_ps, labels)
             loss.backward()
             optimizer.step()
-            
+
             running_loss += loss.item()
     model_path = "/home/hhauter/Documents/W23/MLOps/CookieCutterProject/models"
     torch.save(model, os.path.join(model_path, 'trained_model.pt'))
