@@ -6,4 +6,5 @@ pytest
 pytorch_lightning
 setuptools
 torch
+wandb
 torchvision
