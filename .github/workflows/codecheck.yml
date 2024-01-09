@@ -28,6 +28,6 @@ jobs:
         - name: Run Ruff Check and Format
           run: |
             ruff check
-            ruff format --fix
+            ruff format 
         - name: Set status check
           run: echo "::set-output name=status::success"

@@ -11,7 +11,7 @@ def evaluate():
 
     # TODO: Implement evaluation logic here
     model_path = "models"
-    model = torch.load(os.path.join(model_path,"trained_model.pt"))
+    model = torch.load(os.path.join(model_path, "trained_model.pt"))
     test_set = get_test_dataset()
 
     equals = 0

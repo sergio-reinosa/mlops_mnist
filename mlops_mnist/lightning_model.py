@@ -14,15 +14,10 @@ class MyLightningModule(pl.LightningModule):
             nn.LeakyReLU(),
             nn.Conv2d(32, 16, 3),
             nn.LeakyReLU(),
-            nn.Conv2d(16,8,3),
-            nn.LeakyReLU()
+            nn.Conv2d(16, 8, 3),
+            nn.LeakyReLU(),
         )
-        self.classifier = nn.Sequential(
-            nn.Flatten(),
-            nn.Linear(8*20*20, 128),
-            nn.Dropout(),
-            nn.Linear(128,10)
-        )
+        self.classifier = nn.Sequential(nn.Flatten(), nn.Linear(8 * 20 * 20, 128), nn.Dropout(), nn.Linear(128, 10))
         self.criterion = nn.NLLLoss()
 
     def forward(self, x):
@@ -37,4 +32,3 @@ class MyLightningModule(pl.LightningModule):
     def configure_optimizers(self):
         optimizer = optim.Adam(self.parameters(), lr=0.001)
         return optimizer
-
