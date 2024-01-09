@@ -6,7 +6,7 @@ from torch import nn, optim
 from torch.utils.data import DataLoader
 
 import wandb
-from mlops_mnist.models.model import MyNeuralNetOne
+from models.model import MyNeuralNetOne
 
 
 def get_train_dataset(batch_size):
