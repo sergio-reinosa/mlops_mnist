@@ -2,8 +2,8 @@
 import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 import torch
-from mlops_mnist.models.model import MyNeuralNetOne
-from mlops_mnist.train_model import get_train_dataset
+from models.model import MyNeuralNetOne
+from train_model import get_train_dataset
 
 model = MyNeuralNetOne()
 preds, target = [], []
