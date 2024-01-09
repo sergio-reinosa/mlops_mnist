@@ -12,6 +12,7 @@ def test_training(lr, epochs, batch_size, model_name):
 
     path = os.path.join("models", model_name)
     
+    # DOES NOT WORK ON GITHUB ACTIONS... 
     assert os.path.exists(path)
 
     # clean up 
