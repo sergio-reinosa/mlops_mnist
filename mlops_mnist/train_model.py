@@ -6,8 +6,6 @@ from mlops_mnist.models.model import MyNeuralNetOne
 import os
 from torch.utils.data import DataLoader, TensorDataset
 from torchvision import transforms
-import hydra
-from hydra.core.hydra_config import HydraConfig
 from omegaconf import DictConfig, OmegaConf
 import wandb
 
