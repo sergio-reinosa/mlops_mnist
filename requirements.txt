@@ -1,6 +1,11 @@
-torch >= 2.1.0
-numpy
-torchvision
-matplotlib
-pytest
 click
+matplotlib
+numpy
+omegaconf
+pytest
+pytorch_lightning
+scikit_learn
+setuptools
+torch
+torchvision
+wandb
