@@ -1,6 +1,6 @@
-import torch
 import os
-from torch.utils.data import DataLoader, TensorDataset
+
+import torch
 
 from data.get_dataset import get_test_dataset
 
@@ -11,7 +11,7 @@ def evaluate():
 
     # TODO: Implement evaluation logic here
     model_path = "models"
-    model = torch.load(os.path.join(model_path,"trained_model.pt"))
+    model = torch.load(os.path.join(model_path, "trained_model.pt"))
     test_set = get_test_dataset()
 
     equals = 0

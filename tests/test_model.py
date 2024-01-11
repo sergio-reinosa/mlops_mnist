@@ -5,6 +5,8 @@ import pytest
 import torch
 from torch import nn
 
+
+
 class MyNeuralNet(torch.nn.Module):
     """Basic neural network class.
 

@@ -1,0 +1,4 @@
+hyperparameters:
+  epochs: 20
+  lr: 0.003
+  batch_size: 256

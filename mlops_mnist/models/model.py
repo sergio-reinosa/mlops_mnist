@@ -2,7 +2,7 @@ import torch
 from torch import nn
 
 
-class MyNeuralNet(torch.nn.Module):
+class MyNeuralNetOne(nn.Module):
     """Basic neural network class.
 
     Args:
@@ -12,7 +12,7 @@ class MyNeuralNet(torch.nn.Module):
     """
 
     def __init__(self) -> None:
-        super(MyNeuralNet, self).__init__()
+        super().__init__()
         self.fc1 = nn.Linear(784, 256)
         self.relu1 = nn.ReLU()
         self.fc2 = nn.Linear(256, 128)
